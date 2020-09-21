@@ -2,6 +2,12 @@
 Hello and welcome! We are so glad that you are interesting in contributing to Credit Card Verifier!  
 We only have a couple of rules and we hope you enjoy the process :)  
 
+## Contributing Rules
+1. Put all HTML code in the index.html file only.
+2. Put all JavaScript code in the script.js file only.
+3. Put all CSS code in the style.css file only.
+4. Don't move or delete any files. Only modify them.
+
 ## Contributing Process
 1. Fork the repository
 2. Clone **your forked repository** to your computer
