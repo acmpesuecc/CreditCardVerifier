@@ -1,3 +1,17 @@
 body {
-  background-color: lightblue;
+    background-color: lightblue;
+}
+
+form {
+    margin-left: 45%;
+}
+
+.alignButton {
+    display: block;
+    margin-left: 8%;
+    margin-top: 1%;
+}
+
+.title {
+    margin-left: 30%;
 }
