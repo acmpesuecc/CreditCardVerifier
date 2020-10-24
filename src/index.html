@@ -2,13 +2,38 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" type='application/javascript' ></script>
 <head>
 <body>
   <h1>Credit Card Number Validity Chcker</h1>
   <form>
     <input id="check_value" type="text" name="Number to Check" value=""/>
-    <button id="verify_button" type="button" name="verify" onclick="luhn_algo()">Verify</button>
+    <button id="verify_button" type="button" name="verify" onclick='verify_number()'>Verify</button>
   </form>
-  <script src="script.js" charset="utf-8"></script>
+  <p id='is_card_valid'> <strong>VALID: </strong><span id='card-valid-value'> </span></p>
+  <p id='card_type'> <strong>TYPE: </strong><span id='card-type-value'></span> </p>
+
+  <script type='application/javascript'>
+
+    function verify_number() {
+          // function to run both Luhn's Algorithm check as well as scheme matcher
+          const number = document.getElementById("check_value").value;
+
+          // output elements
+          var card_valid_value = document.querySelector("#card-valid-value");
+          var card_type_value = document.querySelector("#card-type-value");
+
+          // validate and match
+          const is_valid_luhns = luhn_algo(number);
+          const scheme = assign_scheme(number);
+
+          console.log(is_valid_luhns, scheme);
+
+          // show output values
+          card_valid_value.innerHTML = is_valid_luhns ? "YES" : "NO";
+          card_type_value.innerHTML = scheme;
+        };
+
+  </script>
 </body>
 </html>
