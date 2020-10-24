@@ -6,7 +6,7 @@ body {
   background-attachment: fixed;
   padding-top:100px;
   font-family: lato;
-  color: white;
+  color: black;
 }
 .content
 {
@@ -32,6 +32,10 @@ hr
   width: 400px;
   max-width:80%;
 	border-top: 4px solid #f8f8f8;
+}
+p
+{
+  color: white;
 }
 button
 {
