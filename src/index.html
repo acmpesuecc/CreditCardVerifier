@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+<script src="script.js" type='application/javascript' ></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <title>
     CreditCardVerifier
@@ -13,10 +14,12 @@
     <h1>Credit Card Number Validity Checker</h1>
     <hr>
     <form>
-      <input id="check_value" type="number" name="Number to Check" value=""/>
-      <br><br>
-      <button class="btn btn-default btn-lg" id="verify_button" type="button" name="verify" onclick="luhn_algo()">Verify</button>
-    </form>
+    <input id="check_value" type="text" name="Number to Check" value=""/>
+    <button id="verify_button" type="button" name="verify" onclick='verify_number()'>Verify</button>
+  </form>
+  <p id='is_card_valid'> <strong>VALID: </strong><span id='card-valid-value'> </span></p>
+  <p id='card_type'> <strong>TYPE: </strong><span id='card-type-value'></span> </p>
+
     <br>
     <p>
       This program works on Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, which is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI numbers, Canadian Social Insurance Numbers.
@@ -30,6 +33,31 @@
     </p>
     <hr>
   </div>
-  <script src="script.js" charset="utf-8"></script>
+  <script type='application/javascript'>
+
+    function verify_number() {
+          // function to run both Luhn's Algorithm check as well as scheme matcher
+          const number = document.getElementById("check_value").value;
+
+          // output elements
+          var card_valid_value = document.querySelector("#card-valid-value");
+          var card_type_value = document.querySelector("#card-type-value");
+
+          // validate and match
+          const is_valid_luhns = luhn_algo(number);
+          const scheme = assign_scheme(number);
+
+          console.log(is_valid_luhns, scheme);
+
+          // show output values
+          card_valid_value.innerHTML = is_valid_luhns ? "YES" : "NO";
+          card_type_value.innerHTML = scheme;
+        };
+
+  </script>
+
+  
+  
+  
 </body>
 </html>
