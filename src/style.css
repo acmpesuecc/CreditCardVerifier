@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
   padding-top:100px;
   color: black;
-  overflow: hidden;
+  overflow: auto;
 }
 .content
 {
@@ -20,7 +20,7 @@ body {
   vertical-align: center;
   background: rgba(0,0,0,0.3);
   max-width:80%;
-  max-height:80%;
+  
   padding-top: 2%;
   padding-bottom: 2%;
   font-size: 1.1em;
