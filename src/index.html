@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-<script src="script.js" type='application/javascript' ></script>
+  <script src="script.js" type='application/javascript'></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <title>
     CreditCardVerifier
   </title>
-<head>
-<body>
-  <div class="container content">
-    <h1>Credit Card Number Validity Checker</h1>
-    <hr>
-    <form>
-    <input id="check_value" type="text" name="Number to Check" value=""/>&nbsp;&nbsp;
-    <button id="verify_button" type="button" name="verify" onclick='verify_number()'>Verify</button>
-  </form>
-  <div class="output">
-  <p id='is_card_valid'> <strong>VALID: </strong><span id='card-valid-value'> </span></p>
-  <p id='card_type'> <strong>TYPE: </strong><span id='card-type-value'></span> </p>
-</div>
-    <br>
-    <p>
-      This program works on Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, which is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI numbers, Canadian Social Insurance Numbers.
-    </p>
-    <p>
-      For more info-
-      <br><br>
-      <a href="https://www.geeksforgeeks.org/luhn-algorithm/">
-        <button id="clickHere" class="btn btn-default btn-sm">Click here</button>
-      </a>
-    </p>
-    <hr>
-  </div>
-  <script type='application/javascript'>
 
-    function verify_number() {
-          // function to run both Luhn's Algorithm check as well as scheme matcher
-          const number = document.getElementById("check_value").value;
+  <head>
 
-          // output elements
-          var card_valid_value = document.querySelector("#card-valid-value");
-          var card_type_value = document.querySelector("#card-type-value");
+  <body>
+    <div class="container content">
+      <h1>Credit Card Number Validity Checker</h1>
+      <hr>
+      <form>
+        <input id="check_value" type="text" name="Number to Check" value="" />&nbsp;&nbsp;
+        <button id="verify_button" type="button" name="verify" onclick='verify_number()'>Verify</button>
 
-          // validate and match
-          const is_valid_luhns = luhn_algo(number);
-          const scheme = assign_scheme(number);
+      </form>
+      <div class="output">
+        <p id='is_card_valid'> <strong>VALID: </strong><span id='card-valid-value'> </span></p>
+        <p id='card_type'> <strong>TYPE: </strong><span id='card-type-value'></span> </p>
+      </div>
+      <br>
+      <div class="info">
+        <p>
+          This program works on <b style="color:red;">Luhn algorithm</b>, also known as the modulus 10 or mod 10
+          algorithm, which is a
+          simple
+          checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI
+          numbers, Canadian Social Insurance Numbers.
+        </p>
+      </div>
 
-          console.log(is_valid_luhns, scheme);
+      <p>
+        For more info-
+        <br><br>
+        <a href="https://www.geeksforgeeks.org/luhn-algorithm/">
+          <button id="clickHere" class="btn btn-link btn-sm">Click here</button>
+        </a>
+      </p>
+      <hr>
+    </div>
+    <script type='application/javascript'>
 
-          // show output values
-          card_valid_value.innerHTML = is_valid_luhns ? "YES" : "NO";
-          card_type_value.innerHTML = scheme;
-        };
+      function verify_number() {
+        // function to run both Luhn's Algorithm check as well as scheme matcher
+        const number = document.getElementById("check_value").value;
 
-  </script>
+        // output elements
+        var card_valid_value = document.querySelector("#card-valid-value");
+        var card_type_value = document.querySelector("#card-type-value");
 
-  
-  
-  
-</body>
+        // validate and match
+        const is_valid_luhns = luhn_algo(number);
+        const scheme = assign_scheme(number);
+
+        console.log(is_valid_luhns, scheme);
+
+        // show output values
+        card_valid_value.innerHTML = is_valid_luhns ? "YES" : "NO";
+        card_type_value.innerHTML = scheme;
+      };
+
+    </script>
+
+
+
+
+  </body>
+
 </html>
