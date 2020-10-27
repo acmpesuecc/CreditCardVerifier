@@ -1,106 +1,108 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" type='application/javascript'></script>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>
-    CreditCardVerifier
-  </title>
-
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander&family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="application/javascript"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CreditCardVerifier</title>
   </head>
 
   <body>
     <div class="container content">
       <h1>Credit Card Number Validity Checker</h1>
-      <hr>
+      <hr />
       <form>
-        <input  id="check_value" type="text" name="Number to Check" value="" />&nbsp;&nbsp;
-        <button id="verify_button" type="button" name="verify" onclick='verify_number()'>Verify</button>
+        <input
+          id="check_value"
+          type="text"
+          name="Number to Check"
+          value=""
+        />&nbsp;&nbsp;
+        <button
+          id="verify_button"
+          type="button"
+          name="verify"
+          onclick="verify_number()"
+        >
+          Verify
+        </button>
       </form>
       <div class="output">
-        <p id='is_card_valid'> <strong>VALID: </strong><span id='card-valid-value'> </span></p>
-        <p id='card_type'> <strong>TYPE: </strong><span id='card-type-value'></span> </p>
+        <p id="is_card_valid">
+          <strong>VALID: </strong><span id="card-valid-value"> </span>
+        </p>
+        <p id="card_type">
+          <strong>TYPE: </strong><span id="card-type-value"></span>
+        </p>
       </div>
-    <br><br>
-  <div class="container content" >
-  <table style="width:100%; color: white;" >
-    <caption style="text-align: center; color: white;">Credit Card Examples</caption>
-    <tr>
-      <th style="text-align: center;">Credit Card Type</th>
-      <th style="text-align: center;">Credit Card Number</th>
-    </tr>
-    <tr>
-      <td>American Express</td>
-      <td>371449635398431</td>
-    </tr>
-    <tr>
-      <td>Diners Club</td>
-      <td>30569309025904</td>
-    </tr>
-    <tr>
-      <td>Discover</td>
-      <td>6011111111111117</td>
-    </tr>
-    <tr>
-      <td>JCB</td>
-      <td>3530111333300000</td>
-    </tr>
-    <tr>
-      <td>MasterCard</td>
-      <td>5555555555554444</td>
-    </tr>
-    <tr>
-      <td>Visa</td>
-      <td>4111111111111111</td>
-    </tr>
-  </table>
-  </div>
-      <br>
+      <br /><br />
+      <div class="container content">
+        <table style="width: 100%; color: white">
+          <caption style="text-align: center; color: white">
+            Credit Card Examples
+          </caption>
+          <tr>
+            <th style="text-align: center">Credit Card Type</th>
+            <th style="text-align: center">Credit Card Number</th>
+          </tr>
+          <tr>
+            <td>American Express</td>
+            <td>371449635398431</td>
+          </tr>
+          <tr>
+            <td>Diners Club</td>
+            <td>30569309025904</td>
+          </tr>
+          <tr>
+            <td>Discover</td>
+            <td>6011111111111117</td>
+          </tr>
+          <tr>
+            <td>JCB</td>
+            <td>3530111333300000</td>
+          </tr>
+          <tr>
+            <td>MasterCard</td>
+            <td>5555555555554444</td>
+          </tr>
+          <tr>
+            <td>Visa</td>
+            <td>4111111111111111</td>
+          </tr>
+        </table>
+      </div>
+      <br />
       <div class="info">
         <p>
-          This program works on <b style="color:teal;">Luhn algorithm</b>, also known as the modulus 10 or mod 10
-          algorithm, which is a
-          simple
-          checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI
-          numbers, Canadian Social Insurance Numbers.
+          This program works on <b style="color: teal">Luhn algorithm</b>, also
+          known as the modulus 10 or mod 10 algorithm, which is a simple
+          checksum formula used to validate a variety of identification numbers,
+          such as credit card numbers, IMEI numbers, Canadian Social Insurance
+          Numbers.
         </p>
       </div>
 
       <p style="font-size: 5mm;font-weight:bold;color:blanchedalmond">
         For more info-
-        <br><br>
+        <br /><br />
         <a href="https://www.geeksforgeeks.org/luhn-algorithm/">
           <button id="clickHere" class="btn btn-link btn-sm">Click here</button>
         </a>
       </p>
-      <hr>
+      <hr />
     </div>
-    <script type='application/javascript'>
-
-      function verify_number() {
-        // function to run both Luhn's Algorithm check as well as scheme matcher
-        const number = document.getElementById("check_value").value;
-
-        // output elements
-        var card_valid_value = document.querySelector("#card-valid-value");
-        var card_type_value = document.querySelector("#card-type-value");
-
-        // validate and match
-        const is_valid_luhns = luhn_algo(number);
-        const scheme = assign_scheme(number);
-
-        console.log(is_valid_luhns, scheme);
-
-        // show output values
-        card_valid_value.innerHTML = is_valid_luhns ? "YES" : "NO";
-        card_type_value.innerHTML = scheme;
-      };
-
-    </script>
   </body>
-</head>
 </html>
