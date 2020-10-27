@@ -13,6 +13,10 @@ const scheme_validators = [
     name: 'Visa',
     regex: /^4[0-9]{15}/,
   },
+  {
+    name: 'JCB',
+    regex: /^35[2-9]{1}[0-9]{13}/,
+  },
 ];
 
 function assign_scheme(number) {
