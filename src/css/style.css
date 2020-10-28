@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-top: 100px;
+  padding-bottom: 35px;
   color: black;
 }
 .content {
