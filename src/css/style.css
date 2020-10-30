@@ -9,7 +9,7 @@ body {
   font-family: 'Rajdhani', sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding-top: 100px;
+  margin: 100px 0;
   color: black;
 }
 .content {
