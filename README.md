@@ -1,5 +1,5 @@
 # CreditCardVerifier
-CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure numbers.   
+CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure numbers. Checkout the live demo [here!](https://acmpesuecc.github.io/CreditCardVerifier/)  
 
 ## Technology Stack
 - HTML
@@ -7,7 +7,7 @@ CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure 
 - CSS
 
 ## How do I contribute?
-Check out the Contributing Guidelines to learn more! https://github.com/acmpesuecc/CreditCardVerifier/blob/master/CONTRIBUTING.md
+Check out the [Contributing Guidelines](https://github.com/acmpesuecc/CreditCardVerifier/blob/master/CONTRIBUTING.md) to learn more! 
 
 ## Is this beginner friendly?
 YES!
