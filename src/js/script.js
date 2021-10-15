@@ -78,4 +78,8 @@ function verify_number() {
   card_type_value.innerHTML = scheme;
 }
 
+function ShowDiv(){
+  document.getElementById("output_div").style.display = "block";
+}
+
 console.log('check');
