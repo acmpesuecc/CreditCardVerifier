@@ -90,3 +90,10 @@ button {
   margin: auto;
   text-align: center;
 }
+#luhnlink {
+  text-decoration: none;
+  color: inherit;
+}
+caption {
+  padding: 5px 10px;
+}
