@@ -1,112 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Grandstander&family=Rajdhani&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./src/js/script.js" type="application/javascript"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>CreditCardVerifier</title>
-  </head>
-
-  <body>
-    <div class="container content">
-      <h1>Credit Card Number Validity Checker</h1>
-      <hr />
-      <form>
-        <input
-          id="check_value"
-          type="text"
-          name="Number to Check"
-          value=""
-        />&nbsp;&nbsp;
-        <button
-          id="verify_button"
-          type="button"
-          name="verify"
-          onclick="verify_number()"
-        >
-          Verify
-        </button>
-      </form>
-      <div class="output">
-        <p id="is_card_valid">
-          <strong>VALID: </strong><span id="card-valid-value"> </span>
-        </p>
-        <p id="card_type">
-          <strong>TYPE: </strong><span id="card-type-value"></span>
-        </p>
-      </div>
-      <br /><br />
-      <div class="container content">
-        <table style="width: 100%; color: white">
-          <caption style="text-align: center; color: white">
-            Credit Card Examples
-          </caption>
-          <tr>
-            <th style="text-align: center">Credit Card Type</th>
-            <th style="text-align: center">Credit Card Number</th>
-          </tr>
-          <tr>
-            <td>American Express</td>
-            <td>371449635398431</td>
-          </tr>
-          <tr>
-            <td>Diners Club</td>
-            <td>30569309025904</td>
-          </tr>
-          <tr>
-            <td>Discover</td>
-            <td>6011111111111117</td>
-          </tr>
-          <tr>
-            <td>JCB</td>
-            <td>3530111333300000</td>
-          </tr>
-          <tr>
-            <td>MasterCard</td>
-            <td>5555555555554444</td>
-          </tr>
-          <tr>
-            <td>Visa</td>
-            <td>4111111111111111</td>
-          </tr>
-        </table>
-      </div>
-      <br />
-      <div class="info">
-        <p>
-          This program works on <b style="color: teal">Luhn algorithm</b>, also
-          known as the modulus 10 or mod 10 algorithm, which is a simple
-          checksum formula used to validate a variety of identification numbers,
-          such as credit card numbers, IMEI numbers, Canadian Social Insurance
-          Numbers.
-        </p>
-      </div>
-
-      <p style="font-size: 5mm;font-weight:bold;color:blanchedalmond">
-        For more info-
-        <br /><br />
-        <a href="https://www.geeksforgeeks.org/luhn-algorithm/">
-          <button id="clickHere" class="btn btn-link btn-sm">Click here</button>
+<head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+<Title>CreditCardVerifier </Title>
+<head>
+<body>
+  <h1>Credit Card Number Validity Checker</h1>
+  <form align="center">
+    <input id="check_value" type="numbers" name="Number to Check" value=""/>
+    </br><button id="verify_button" type="button" name="verify" onclick="luhn_algo()">Verify</button>
+  </form>
+  <a href="https://en.wikipedia.org/wiki/Luhn_algorithm">
+          <center><button id="clickHere" class="btn btn-link btn-sm">Click here</button>  </center>
         </a>
-      </p>
-      <hr />
-    </div>
-    <footer style="text-align: center; font-weight: bold;font-size: 5mm;">
-      <p>acmpesuecc</p>
-      <p><a href="https://github.com/acmpesuecc/CreditCardVerifier">Github Repository</a></p>
-    </footer>
-  </body>
+  <script src="script.js" charset="utf-8"></script>
+</body>
 </html>
