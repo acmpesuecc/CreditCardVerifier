@@ -90,3 +90,6 @@ button {
   margin: auto;
   text-align: center;
 }
+caption {
+  padding: 5px 10px;
+}
