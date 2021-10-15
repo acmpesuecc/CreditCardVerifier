@@ -35,12 +35,12 @@
           id="verify_button"
           type="button"
           name="verify"
-          onclick="verify_number()"
+          onclick="verify_number(); ShowDIV();"
         >
           Verify
         </button>
       </form>
-      <div class="output">
+      <div style="display: none;" class="output" id="output_div">
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
