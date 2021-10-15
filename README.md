@@ -1,5 +1,7 @@
 # CreditCardVerifier
-CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure numbers. Checkout the live demo [here!](https://acmpesuecc.github.io/CreditCardVerifier/)  
+CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure numbers. Checkout the live demo [here!](https://acmpesuecc.github.io/CreditCardVerifier/)
+
+> UPDATE: CreditCardVerifier Will now enforce a max cap of 3PRs per issue.
 
 ## Technology Stack
 - HTML
