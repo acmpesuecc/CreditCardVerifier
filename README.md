@@ -10,7 +10,9 @@ CreditCardVerifier uses Luhn's Alogrithm to verify Credit Card and other secure 
 - FORK the Repository
 - Clone The Repo on your desktop
 - Make Changes to the files.
+
 ***you can edit the html file in any text editor or IDE then save it using the extension .html to view it in your browser as a website***
+
 - Push your changes and Intitate a Pull Requests
 - Done!! 
 
