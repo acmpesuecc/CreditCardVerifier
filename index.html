@@ -25,12 +25,12 @@
       <h1>Credit Card Number Validity Checker</h1>
       <hr />
       <form>
-        <input
-          id="check_value"
-          type="text"
-          name="Number to Check"
-          value=""
-        />&nbsp;&nbsp;
+          <label for="check_value">Card Number:</label><br>
+          <input type="text" id="check_value" name="Number to Check"><br>
+          <label for="Expiry">Expiry(MM/YYYY):</label><br>
+          <input type="text" id="Expiry" name="Year to check">
+        &nbsp;&nbsp;
+        </form> <br>
         <button
           id="verify_button"
           type="button"
@@ -39,8 +39,8 @@
         >
           Verify
         </button>
-      </form>
-      <div class="output">
+      
+      <div class="output"><br>
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
