@@ -23,7 +23,7 @@ const scheme_validators = [
   },
   {
       name: 'Union Pay',
-      regex: /^9[0-9]{15}/,
+      regex: /^(62[0-9]{14,17})/,
   },
   {
     name: 'Dinners Club',
@@ -72,11 +72,6 @@ function luhn_algo(number) {
 }
 
 function verify_number() {
-  
-  // function to show "Valid" and "Type" fields only after "Verify" has been clicked
-  var disp = document.getElementById('output');
-  disp.style.display = 'block';
-
   // function to run both Luhn's Algorithm check as well as scheme matcher
   const number = document.getElementById('check_value').value;
 
@@ -93,18 +88,6 @@ function verify_number() {
   // show output values
   card_valid_value.innerHTML = is_valid_luhns ? 'YES' : 'NO';
   card_type_value.innerHTML = scheme;
-  
 }
 
 console.log('check');
-function Aadharcheck() {
-  var aadhar = prompt("Enter your Aadhar number here!");
-  var aadharint = parseInt(aadhar);
-  localStorage.setItem('aadharnum',aadharint);
-  var aadharcheck = /^[2-9]{1}[0-9]{11}$/;
-  if(aadharcheck.test(localStorage.getItem('aadharnum'))){
-    alert("Aadhar Number is Valid!");
-  } else {
-    alert("Aadhar Number is invalid!");
-  }
-}
