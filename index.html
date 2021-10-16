@@ -2,6 +2,12 @@
 <html>
   <head>
     <link
+    rel="icon"
+    type="image/x-icon"
+    href="favicon1.ico"
+    />
+    <title>CC VERIFICATION</title>
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
@@ -25,14 +31,12 @@
       <h1>Credit Card Number Validity Checker</h1>
       <hr />
       <form>
-          <label for="check_value">Card Number:</label><br>
-          <input type="text" id="check_value" name="Number to Check"><br>
-          <label for="ExpiryMonth">Expiry(MM):</label><br>
-          <input type="text" id="ExpiryMonth" name="Month to check"><br>
-          <label for="ExpiryYear">Expiry(YYYY):</label><br>
-          <input type="text" id="ExpiryYear" name="Year to check">
-        &nbsp;&nbsp;
-        </form> <br>
+        <input
+          id="check_value"
+          type="text"
+          name="Number to Check"
+          value=""
+        />&nbsp;&nbsp;
         <button
           id="verify_button"
           type="button"
@@ -41,8 +45,8 @@
         >
           Verify
         </button>
-      
-      <div class="output"><br>
+      </form>
+      <div class="output" id="output">
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
@@ -86,10 +90,31 @@
           </tr>
         </table>
       </div>
+      <br>
+      <div class="container content">
+        <table style="width: 100%; color: white">
+          <p>What else can I Verify?</p>
+          <caption style="text-align: center; color: white">
+            Using online tools similar to ours, you can also verify the validity of the following!
+          </caption>
+          <tr>
+            <td><a onclick="Aadharcheck()">Aadhar Card Number</a></td>
+            <td>Vehicle Registeration</td>
+          </tr>
+          <tr>
+            <td>PAN Card Number</td>
+            <td>Phone Number</td>
+          </tr>
+          <tr>
+            <td>IMEI Number</td>
+            <td>and more...</td>
+          </tr>
+        </table>
+      </div>
       <br />
       <div class="info">
         <p>
-          This program works on <b style="color: teal">Luhn algorithm</b>, also
+          This program works on <b style="color: teal"><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm</a></b>, also
           known as the modulus 10 or mod 10 algorithm, which is a simple
           checksum formula used to validate a variety of identification numbers,
           such as credit card numbers, IMEI numbers, Canadian Social Insurance
