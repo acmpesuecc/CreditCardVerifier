@@ -26,13 +26,14 @@
       <hr />
       <form>
 	<label for="check_value"><b>Number to Check:</b></label><br>
-	<input
+	 <input
           id="check_value"
           type="text"
           name="Number to Check"
-          value=""><br>
-          
-          <label for="ExpiryMonth">Expiry(MM):</label><br>
+          value=""
+         />&nbsp;&nbsp;
+	      
+          <br><label for="ExpiryMonth">Expiry(MM):</label><br>
           <input type="text" id="ExpiryMonth" name="Month to check"><br>
           <label for="ExpiryYear">Expiry(YYYY):</label><br>
           <input type="text" id="ExpiryYear" name="Year to check"><br>
@@ -47,8 +48,8 @@
         >
           Verify
         </button>
-      
-      <div class="output"><br>
+      </form>
+      <div class="output">
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
