@@ -17,6 +17,18 @@ const scheme_validators = [
     name: 'JCB',
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
+  {
+      name: 'Rupay',
+      regex: /^60[2-5]{1}[6-9]{13}/, 
+  },
+  {
+      name: 'Union Pay',
+      regex: /^9[0-9]{15}/,
+  },
+  {
+    name: 'Dinners Club',
+    regex: /^30[0-9]{14}/,
+  },
 ];
 
 function assign_scheme(number) {
