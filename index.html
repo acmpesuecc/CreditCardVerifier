@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    
     <link
     rel="icon"
     type="image/x-icon"
@@ -23,14 +25,16 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    
     <title>CreditCardVerifier</title>
   </head>
 
   <body>
+    
     <div class="container content">
       <h1>Credit Card Number Validity Checker</h1>
       <hr />
-      <form>
+      <form class = "info">
         <input
           id="check_value"
           type="text"
@@ -39,7 +43,7 @@
         />&nbsp;&nbsp;
         <button
           id="verify_button"
-          type="button"
+          type="submit"
           name="verify"
           onclick="verify_number()"
         >
@@ -138,5 +142,6 @@
       <p>acmpesuecc</p>
       <p><a href="https://github.com/acmpesuecc/CreditCardVerifier">Github Repository</a></p>
     </footer>
+
   </body>
 </html>
