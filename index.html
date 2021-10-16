@@ -46,7 +46,7 @@
           Verify
         </button>
       </form>
-      <div class="output">
+      <div class="output" id="output">
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
@@ -98,10 +98,32 @@
           </tr>
         </table>
       </div>
+      <br>
+      <div class="container content">
+        <table style="width: 100%; color: white">
+          <p>What else can I Verify?</p>
+          <caption style="text-align: center; color: white">
+            Using online tools similar to ours, you can also verify the validity of the following!
+          </caption>
+          <tr>
+            <td><a onclick="Aadharcheck()">Aadhar Card Number</a></td>
+            <td>Vehicle Registeration</td>
+          </tr>
+          <tr>
+            <td>PAN Card Number</td>
+            <td>Phone Number</td>
+          </tr>
+          <tr>
+            <td>IMEI Number</td>
+            <td>and more...</td>
+          </tr>
+        </table>
+      </div>
       <br />
       <div class="info">
         <p>
-          This program works on <b style="color: teal"><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm</b></a>, also
+
+
           known as the modulus 10 or mod 10 algorithm, which is a simple
           checksum formula used to validate a variety of identification numbers,
           such as credit card numbers, IMEI numbers, Canadian Social Insurance
