@@ -27,7 +27,7 @@ const scheme_validators = [
   },
   {
     name: 'Dinners Club',
-    regex: /^30[0-9]{14}/,
+    regex: /3(?:0[0-5]|[68][0-9])[0-9]{11}/,
   },
 ];
 
