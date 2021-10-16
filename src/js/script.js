@@ -14,6 +14,10 @@ const scheme_validators = [
     regex: /^4[0-9]{15}/,
   },
   {
+    name: 'Sudexo',
+    regex: /^35[2-9]{1}[0-9]{13}/,
+  },
+  {
     name: 'JCB',
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
