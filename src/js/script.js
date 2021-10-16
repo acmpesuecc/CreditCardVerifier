@@ -17,6 +17,58 @@ const scheme_validators = [
     name: 'JCB',
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
+  {
+    name: 'Discover',
+    regex: /^6(0|2|4|5)[0-9]{14}/,
+  },
+  {
+    name: 'Maestro (13 Digit)',
+    regex: /^5(0|6|7|8)[0-9]{11}/,
+  },
+  {
+    name: 'Maestro (15 Digit)',
+    regex: /^5(0|6|7|8)[0-9]{13}/,
+  },
+  {
+    name: 'Maestro (16 Digit)',
+    regex: /^5(0|6|7|8)[0-9]{14}/,
+  },
+  {
+    name: 'Maestro (19 Digit)',
+    regex: /^5(0|6|7|8)[0-9]{17}/,
+  },
+  {
+    name: 'Maestro (13 Digit)',
+    regex: /^6[0-9]{12}/,
+  },
+  {
+    name: 'Maestro (15 Digit)',
+    regex: /^6[0-9]{14}/,
+  },
+  {
+    name: 'Maestro (16 Digit)',
+    regex: /^6[0-9]{15}/,
+  },
+  {
+    name: 'Maestro (19 Digit)',
+    regex: /^6[0-9]{18}/,
+  },
+  {
+    name: 'China UnionPay (16 Digit)',
+    regex: /^62[0-9]{14}/,
+  },
+  {
+    name: 'China UnionPay (19 Digit)',
+    regex: /^62[0-9]{17}/,
+  },
+  {
+    name: 'UATP',
+    regex: /^1[0-9]{14}/,
+  },
+  {
+    name: 'Dankort',
+    regex: /^5019[0-9]{12}/,
+  },
 ];
 
 function assign_scheme(number) {
