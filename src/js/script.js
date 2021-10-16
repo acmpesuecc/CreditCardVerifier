@@ -18,16 +18,7 @@ const scheme_validators = [
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
   {
-      name: 'Rupay',
-      regex: /^60[2-5]{1}[6-9]{13}/, 
-  },
-  {
-      name: 'Union Pay',
-      regex: /^(62[0-9]{14,17})/,
-  },
-  {
-    name: 'Dinners Club',
-    regex: /3(?:0[0-5]|[68][0-9])[0-9]{11}/,
+
   },
 ];
 
@@ -91,3 +82,4 @@ function verify_number() {
 }
 
 console.log('check');
+
