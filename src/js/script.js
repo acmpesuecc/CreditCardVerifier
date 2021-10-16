@@ -6,12 +6,8 @@ const scheme_validators = [
     regex: /^3(4|7)[0-9]{13}/,
   },
   {
-    name: 'MasterCard 5-series',
+    name: 'Mastercard',
     regex: /^5[1-5]{1}[0-9]{14}/,
-  },
-  {
-    name: 'MasterCard 2-series',
-    regex: /^2[[2-7]{1}[0-9]{14}/,
   },
   {
     name: 'Visa',
@@ -21,14 +17,6 @@ const scheme_validators = [
     name: 'JCB',
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
-  {
-    name: 'Diners Club'
-    regex: /^3(0|6|8)[0-9]{13}/,
-  },
-  {
-    name: 'RuPay'
-    regex: /^6(0|5)[0-9]{14}/,
-  }
 ];
 
 function assign_scheme(number) {
