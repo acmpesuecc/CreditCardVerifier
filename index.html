@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <link
     rel="icon"
     type="image/x-icon"
@@ -30,7 +31,7 @@
     <div class="container content">
       <h1>Credit Card Number Validity Checker</h1>
       <hr />
-      <form>
+      <form class = "info">
         <input
           id="check_value"
           type="text"
@@ -39,7 +40,7 @@
         />&nbsp;&nbsp;
         <button
           id="verify_button"
-          type="button"
+          type="submit"
           name="verify"
           onclick="verify_number()"
         >

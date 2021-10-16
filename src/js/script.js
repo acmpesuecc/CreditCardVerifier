@@ -96,3 +96,16 @@ function Aadharcheck() {
     alert("Aadhar Number is invalid!");
   }
 }
+$(document).ready(() => {
+  $('.info').on('submit', () => {
+      return false;
+  });
+});
+$('.info').keypress((e) => {
+
+  // Enter key corresponds to number 13
+  if (e.which === 13) {
+      $('.info').submit();
+      console.log('form submitted');
+  }
+})
