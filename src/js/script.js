@@ -18,56 +18,7 @@ const scheme_validators = [
     regex: /^35[2-9]{1}[0-9]{13}/,
   },
   {
-    name: 'Discover',
-    regex: /^6(0|2|4|5)[0-9]{14}/,
-  },
-  {
-    name: 'Maestro (13 Digit)',
-    regex: /^5(0|6|7|8)[0-9]{11}/,
-  },
-  {
-    name: 'Maestro (15 Digit)',
-    regex: /^5(0|6|7|8)[0-9]{13}/,
-  },
-  {
-    name: 'Maestro (16 Digit)',
-    regex: /^5(0|6|7|8)[0-9]{14}/,
-  },
-  {
-    name: 'Maestro (19 Digit)',
-    regex: /^5(0|6|7|8)[0-9]{17}/,
-  },
-  {
-    name: 'Maestro (13 Digit)',
-    regex: /^6[0-9]{12}/,
-  },
-  {
-    name: 'Maestro (15 Digit)',
-    regex: /^6[0-9]{14}/,
-  },
-  {
-    name: 'Maestro (16 Digit)',
-    regex: /^6[0-9]{15}/,
-  },
-  {
-    name: 'Maestro (19 Digit)',
-    regex: /^6[0-9]{18}/,
-  },
-  {
-    name: 'China UnionPay (16 Digit)',
-    regex: /^62[0-9]{14}/,
-  },
-  {
-    name: 'China UnionPay (19 Digit)',
-    regex: /^62[0-9]{17}/,
-  },
-  {
-    name: 'UATP',
-    regex: /^1[0-9]{14}/,
-  },
-  {
-    name: 'Dankort',
-    regex: /^5019[0-9]{12}/,
+
   },
 ];
 
@@ -112,11 +63,6 @@ function luhn_algo(number) {
 }
 
 function verify_number() {
-  
-  // function to show "Valid" and "Type" fields only after "Verify" has been clicked
-  var disp = document.getElementById('output');
-  disp.style.display = 'block';
-
   // function to run both Luhn's Algorithm check as well as scheme matcher
   const number = document.getElementById('check_value').value;
 
@@ -133,35 +79,7 @@ function verify_number() {
   // show output values
   card_valid_value.innerHTML = is_valid_luhns ? 'YES' : 'NO';
   card_type_value.innerHTML = scheme;
-  
 }
 
 console.log('check');
-function Aadharcheck() {
-  var aadhar = prompt("Enter your Aadhar number here!");
-  var aadharint = parseInt(aadhar);
-  localStorage.setItem('aadharnum',aadharint);
-  var aadharcheck = /^[2-9]{1}[0-9]{11}$/;
-  if(aadharcheck.test(localStorage.getItem('aadharnum'))){
-    alert("Aadhar Number is Valid!");
-  } else {
-    alert("Aadhar Number is invalid!");
-  }
-}
-$(document).ready(() => {
-  $('.info').on('submit', () => {
-
-      // prevents default behaviour
-      // Prevents event propagation
-      return false;
-  });
-});
-$('.info').keypress((e) => {
-
-  // Enter key corresponds to number 13
-  if (e.which === 13) {
-      $('.info').submit();
-      console.log('form submitted');
-  }
-})
 
