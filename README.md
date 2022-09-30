@@ -31,7 +31,7 @@ Step 1. Fork this Repository, this will create a Local Copy of this Repository f
 
 Use terminal and write the following commands:
 
-```
+```bash
 $ git clone https://github.com/<your-username>/<repo-name>
 $ cd <repo-name>
 $ git remote add upstream https://github.com/<upstream-owner>/<repo-name>
@@ -39,7 +39,6 @@ $ git remote add upstream https://github.com/<upstream-owner>/<repo-name>
 Step 2. Create a new branch and then checkout the branch. Never commit changes on main branch.
 ```
 $ git checkout -b <branch_name>
-
 ```
    or 
 
