@@ -34,23 +34,21 @@
     <div class="container content">
       <h1>Credit Card Number Validity Checker</h1>
       <hr />
-      <form class = "info">
         <input
           id="check_value"
           type="text"
           name="Number to Check"
           value=""
+          onkeyup="check_enter_key(event)"
         />&nbsp;&nbsp;
         <button
           id="verify_button"
-          type="submit"
           name="verify"
           onclick="verify_number()"
         >
           Verify
         </button>
-      </form>
-      <div class="output">
+      <div class="output" id="card-output">
         <p id="is_card_valid">
           <strong>VALID: </strong><span id="card-valid-value"> </span>
         </p>
