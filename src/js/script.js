@@ -16,10 +16,7 @@ const scheme_validators = [
   {
     name: 'JCB',
     regex: /^35[2-9]{1}[0-9]{13}/,
-  },
-  {
-
-  },
+  }
 ];
 
 function assign_scheme(number) {
@@ -40,6 +37,12 @@ function assign_scheme(number) {
 
   // return the name of the valid scheme
   return valid_names.filter((name) => name !== null)[0] || 'Unknown';
+}
+
+function check_enter_key(event) {
+    if (event.key == "Enter") {
+        verify_number();
+    }
 }
 
 function luhn_algo(number) {
@@ -69,6 +72,7 @@ function verify_number() {
   // output elements
   var card_valid_value = document.querySelector('#card-valid-value');
   var card_type_value = document.querySelector('#card-type-value');
+  var output_div = document.querySelector('#card-output');
 
   // validate and match
   const is_valid_luhns = luhn_algo(number);
@@ -79,6 +83,7 @@ function verify_number() {
   // show output values
   card_valid_value.innerHTML = is_valid_luhns ? 'YES' : 'NO';
   card_type_value.innerHTML = scheme;
+  output_div.style.display = "block";
 }
 
 console.log('check');
