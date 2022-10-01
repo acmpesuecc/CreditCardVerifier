@@ -73,7 +73,6 @@ function verify_number() {
   var card_valid_value = document.querySelector('#card-valid-value');
   var card_type_value = document.querySelector('#card-type-value');
   var output_div = document.querySelector('#card-output');
-  console.log(card_valid_value);
 
   // validate and match
   const is_valid_luhns = luhn_algo(number);
