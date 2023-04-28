@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    
-    <link
-    rel="icon"
-    type="image/x-icon"
-    href="favicon1.ico"
-    />
-    <title>CC VERIFICATION</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Grandstander&family=Rajdhani&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./src/js/script.js" type="application/javascript"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    
-    <title>CreditCardVerifier</title>
-  </head>
 
-  <body>
-    
-    <div class="container content">
-      <h1>Credit Card Number Validity Checker</h1>
-      <hr />
-        <input
-          id="check_value"
-          type="text"
-          name="Number to Check"
-          value=""
-          onkeyup="check_enter_key(event)"
-        />&nbsp;&nbsp;
-        <button
-          id="verify_button"
-          name="verify"
-          onclick="verify_number()"
-        >
-          Verify
-        </button>
-      <div class="output" id="card-output">
-        <p id="is_card_valid">
-          <strong>VALID: </strong><span id="card-valid-value"> </span>
-        </p>
-        <p id="card_type">
-          <strong>TYPE: </strong><span id="card-type-value"></span>
-        </p>
-      </div>
-      <br /><br />
-      <div class="container content">
-        <table style="width: 100%; color: white">
-          <caption style="text-align: center; color: white">
-            Credit Card Examples
-          </caption>
-          <tr>
-            <th style="text-align: center">Credit Card Type</th>
-            <th style="text-align: center">Credit Card Number</th>
-          </tr>
-          <tr>
-            <td>American Express</td>
-            <td>371449635398431</td>
-          </tr>
-          <tr>
-            <td>Diners Club</td>
-            <td>3056930902590400</td>
-          </tr>
-          <tr>
-            <td>Discover</td>
-            <td>6011111111111117</td>
-          </tr>
-          <tr>
-            <td>JCB</td>
-            <td>3530111333300000</td>
-          </tr>
-          <tr>
-            <td>MasterCard</td>
-            <td>5555555555554444</td>
-          </tr>
-          <tr>
-            <td>Visa</td>
-            <td>4111111111111111</td>
-          </tr>
+<head>
 
-          <tr>
-            <td>Union Pay</td>
-            <td>6233222222222222</td>
-          </tr>
-          <tr>
-            <td>RuPay</td>
-            <td>6027777777776666</td>
-          </tr>
-        </table>
-      </div>
-      <br />
-      <div class="info">
-        <p>
-          This program works on <b style="color: teal"><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn algorithm</b></a>, also
-          known as the modulus 10 or mod 10 algorithm, which is a simple
-          checksum formula used to validate a variety of identification numbers,
-          such as credit card numbers, IMEI numbers, Canadian Social Insurance
-          Numbers.
-        </p>
-      </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
-      <p style="font-size: 5mm;font-weight:bold;color:blanchedalmond">
-        For more info-
-        <br /><br />
-        <a href="https://www.geeksforgeeks.org/luhn-algorithm/">
-          <button id="clickHere" class="btn btn-link btn-sm">Click here</button>
-        </a>
+  <link rel="icon" type="image/x-icon" href="favicon1.ico" />
+  <title>CC VERIFICATION</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Grandstander&family=Rajdhani&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <script src="./src/js/script.js" type="application/javascript"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <title>CreditCardVerifier</title>
+</head>
+
+
+
+<body>
+
+  <div class="container content">
+    <h1>Credit Card Number Validity Checker</h1>
+    <hr />
+    <input id="check_value" type="text" name="Number to Check" value="" onkeyup="check_enter_key(event)" />&nbsp;&nbsp;
+    <button id="verify_button" name="verify" onclick="verify_number()">
+      Verify
+    </button>
+    <div class="output" id="card-output">
+      <p id="is_card_valid">
+        <strong>VALID: </strong><span id="card-valid-value"> </span>
       </p>
-      <hr />
+      <p id="card_type">
+        <strong>TYPE: </strong><span id="card-type-value"></span>
+      </p>
     </div>
-    <footer style="text-align: center; font-weight: bold;font-size: 5mm;">
-      <p>acmpesuecc</p>
-      <p><a href="https://github.com/acmpesuecc/CreditCardVerifier">Github Repository</a></p>
-    </footer>
+    <br /><br />
+    <div class="container content">
+      <table style="width: 100%; color: white">
+        <caption style="text-align: center; color: white">
+          Credit Card Examples
+        </caption>
+        <tr>
+          <th style="text-align: center">Credit Card Type</th>
+          <th style="text-align: center">Credit Card Number</th>
+        </tr>
+        <tr>
+          <td>American Express</td>
+          <td>371449635398431</td>
+        </tr>
+        <tr>
+          <td>Diners Club</td>
+          <td>3056930902590400</td>
+        </tr>
+        <tr>
+          <td>Discover</td>
+          <td>6011111111111117</td>
+        </tr>
+        <tr>
+          <td>JCB</td>
+          <td>3530111333300000</td>
+        </tr>
+        <tr>
+          <td>MasterCard</td>
+          <td>5555555555554444</td>
+        </tr>
+        <tr>
+          <td>Visa</td>
+          <td>4111111111111111</td>
+        </tr>
 
-  </body>
+        <tr>
+          <td>Union Pay</td>
+          <td>6233222222222222</td>
+        </tr>
+        <tr>
+          <td>RuPay</td>
+          <td>6027777777776666</td>
+        </tr>
+      </table>
+    </div>
+    <br />
+
+
+    <!-- <div class="info"> -->
+    <!--   <p> -->
+    <!--     This program works on <b style="color: teal"><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn -->
+    <!--         algorithm</b></a>, also -->
+    <!--     known as the modulus 10 or mod 10 algorithm, which is a simple -->
+    <!--     checksum formula used to validate a variety of identification numbers, -->
+    <!--     such as credit card numbers, IMEI numbers, Canadian Social Insurance -->
+    <!--     Numbers. -->
+    <!--   </p> -->
+    <!-- </div> -->
+
+    <button id="clickHere" class="how-it-works btn btn-link btn-sm">How It Works?</button>
+  </div>
+  <footer style="text-align: center; font-weight: bold;font-size: 5mm;">
+    <p>acmpesuecc</p>
+    <p><a href="https://github.com/acmpesuecc/CreditCardVerifier">Github Repository</a></p>
+  </footer>
+
+
+  <div class="how-it-works-popup">
+    <div class="popup-flexwrapper">
+      <p>
+        This program works on <b style="color: teal"><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn
+            algorithm</b></a>, also
+        known as the modulus 10 or mod 10 algorithm, which is a simple
+        checksum formula used to validate a variety of identification numbers,
+        such as credit card numbers, IMEI numbers, Canadian Social Insurance
+        Numbers.
+      </p>
+      <button class="close-popup">
+        Close
+      </button>
+    </div>
+
+  </div>
+</body>
+
+<script>
+  const button = document.querySelector('.how-it-works');
+  const element = document.querySelector('.how-it-works-popup');
+  const another_button = document.querySelector('.close-popup');
+
+
+  button.addEventListener('click', () => {
+    element.classList.toggle('how-it-works-show');
+  });
+
+  another_button.addEventListener('click', () => {
+    element.classList.toggle('how-it-works-show');
+  });
+</script>
+
 </html>

@@ -60,6 +60,7 @@ button {
 }
 
 #clickHere {
+  font-size: 18px;
   background-color: aliceblue;
   border-radius: 20px;
   padding: 1.5%;
@@ -93,3 +94,56 @@ button {
 caption {
   padding: 5px 10px;
 }
+
+
+.how-it-works-popup{
+  background-color: #191A22;
+  height: 80vh;
+  width: 80vw;
+  display: fixed;
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  border-radius: 20px;
+  animation: fade-in-out 0.2s ease-in-out;
+}
+
+
+.how-it-works-show{
+  top: 50%;
+  left: 50% ;
+  transform: translate(-50%, -50%) ;
+}
+
+
+.popup-flexwrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.popup-flexwrapper > p{
+  margin: 50px;
+  font-size: 3rem;
+}
+
+.popup-flexwrapper > button{
+  font-size: 3rem;
+  margin: 50px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 1.5%;
+  border: none;
+  transition: 0.6s ease;
+}
+.popup-flexwrapper > button:hover{
+  background-color: #ff0000;
+  color: white;
+}
+
+#check_value{
+  border-radius: 20px;
+  padding: 7px 20px;
+}
+
