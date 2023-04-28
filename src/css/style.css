@@ -3,7 +3,7 @@
 }
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    url(https://bestanimations.com/media/water/1720002162mysterious-dark-water-waves.gif);
   background-position: center;
   background-size: cover;
   font-family: 'Rajdhani', sans-serif;
@@ -14,13 +14,16 @@ body {
   margin: 100px 0;
   color: black;
 }
+
 .content {
-  box-shadow: 10px 10px 80px 10px #00000042;
-  border: 0mm solid transparent;
+
+  box-shadow: 10px 10px 80px 10px #00000000;
+  border: transparent;
   border-radius: 30px;
   text-align: center;
   vertical-align: center;
-  background: rgba(0, 0, 0, 0.4);
+  
+  background: transparent;
   max-width: 80%;
   max-height: 80%;
   padding-top: 2%;
@@ -28,6 +31,7 @@ body {
   font-size: 1.1em;
 }
 h1 {
+
   font-weight: 700;
   font-size: 3.5em;
   font-family: 'Times New roman', cursive;
@@ -71,6 +75,17 @@ button {
   background-color: #ff0000;
   color: white;
 }
+
+.back-video
+{
+position: absolute;
+right: 0;
+bottom: 0;
+z-index: -1;
+min-width: 100%;
+min-height: 100%;
+}
+
 
 .output {
   box-shadow: 3px 3px 24px 3px #00000042;
