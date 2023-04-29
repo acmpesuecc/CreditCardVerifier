@@ -70,10 +70,10 @@ function verify_number() {
   const number = document.getElementById('check_value').value;
 
   // output elements
-  var card_valid_value = document.querySelector('#card-valid-value');
-  var card_type_value = document.querySelector('#card-type-value');
-  var output_div = document.querySelector('#card-output');
 
+
+  const valid_not_valid = document.querySelector("#is_card_valid");
+ 
   // validate and match
   const is_valid_luhns = luhn_algo(number);
   const scheme = assign_scheme(number);
@@ -81,7 +81,13 @@ function verify_number() {
   console.log(is_valid_luhns, scheme);
 
   // show output values
-  card_valid_value.innerHTML = is_valid_luhns ? 'YES' : 'NO';
+  
+  valid_not_valid.innerHTML = is_valid_luhns ? '<strong>VALID</strong><span id="card-valid-value"> </span>' : '<strong>INVALID</strong><span id="card-valid-value"> </span>';
+  var value = document.querySelector('#value');
+  var card_valid_value = document.querySelector('#card-valid-value'); 
+  var card_type_value = document.querySelector('#card-type-value');
+  var output_div = document.querySelector('#card-output');
+  card_valid_value.innerHTML = is_valid_luhns ? '<img src = "https://cdn.discordapp.com/attachments/774511963472003125/1101674736225894400/mukund_yes.jpg" height = "200px">' : '<img src = "https://cdn.discordapp.com/attachments/774511963472003125/1101674735454134393/mukund_no.jpg" height = "200px">';
   card_type_value.innerHTML = scheme;
   output_div.style.display = "block";
 }
