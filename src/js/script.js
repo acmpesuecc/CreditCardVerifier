@@ -64,7 +64,31 @@ function luhn_algo(number) {
 
   return nCheck % 10 == 0;
 }
+function give_img(String)
+{
+    strr=String;
+    console.log(strr);
+    switch (strr) {
+    case "American Express (AMEX)":
+      document.getElementById('card-type-img').src ='https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg';
+      break;
+    case "JCB":
+      document.getElementById('card-type-img').src = 'https://1000logos.net/wp-content/uploads/2020/08/JCB-Logo-2003.jpg';
+      break;
+    case "Mastercard":
+      document.getElementById('card-type-img').src = 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg';
+      break;
+      case "Visa":
+      document.getElementById('card-type-img').src='https://km.visamiddleeast.com/dam/VCOM/blogs/visa-blue-gradient-800x450.jpg';
+      break;
 
+    default:
+      document.getElementById('card-type-img').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMCHEyWY9OkvwgXom0t75x-kiIGc5FkWhkqBkpCGq0&s';
+    }
+    
+  
+
+}
 function verify_number() {
   // function to run both Luhn's Algorithm check as well as scheme matcher
   const number = document.getElementById('check_value').value;
@@ -73,16 +97,19 @@ function verify_number() {
   var card_valid_value = document.querySelector('#card-valid-value');
   var card_type_value = document.querySelector('#card-type-value');
   var output_div = document.querySelector('#card-output');
+  var card_type_img=document.querySelector('#card-type-img')    
 
   // validate and match
   const is_valid_luhns = luhn_algo(number);
   const scheme = assign_scheme(number);
+    const imgop=give_img(scheme);
 
-  console.log(is_valid_luhns, scheme);
+  console.log(is_valid_luhns, scheme,imgop);
 
   // show output values
   card_valid_value.innerHTML = is_valid_luhns ? 'YES' : 'NO';
   card_type_value.innerHTML = scheme;
+    card_type_img.innerHTML = imgop;
   output_div.style.display = "block";
 }
 
